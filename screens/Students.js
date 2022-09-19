@@ -1,131 +1,41 @@
-import { Text, View, Image, ScrollView } from "react-native";
+import { useState } from "react";
+import { Text, View, Image, ScrollView, Modal } from "react-native";
 import StudentCard from "../components/StudentCard";
 
 export default function StudentsScreen({navigation}){
+  const [modal, setModal] = useState(null);
   
   const students = [
-    {
-    name: "stevennius",
-    birthdate: "26-08-2008",
-    image: "https://images.unsplash.com/photo-1663121679412-9eeff30ef817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-    },
-    {
-    name: "vanessa",
-    birthdate: "17-09-2023",
-    image: "https://images.unsplash.com/photo-1663121679412-9eeff30ef817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-    },
-    {
-    name: "jen",
-    birthdate: "13-7-2011",
-    image: "https://images.unsplash.com/photo-1663121679412-9eeff30ef817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-    },
-    {
-    name: "Stevennius chandra",
-    birthdate: "13-7-2008",
-    image: "https://images.unsplash.com/photo-1663121679412-9eeff30ef817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-    },
-    {
-    name: "Stevennius chandra",
-    birthdate: "13-7-2008",
-    image: "https://images.unsplash.com/photo-1663121679412-9eeff30ef817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-    },
-    {
-    name: "Stevennius chandra",
-    birthdate: "13-7-2008",
-    image: "https://images.unsplash.com/photo-1663121679412-9eeff30ef817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-    },
-    {
-    name: "Stevennius chandra",
-    birthdate: "13-7-2008",
-    image: "https://images.unsplash.com/photo-1663121679412-9eeff30ef817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-    },
-    {
-    name: "Stevennius chandra",
-    birthdate: "13-7-2008",
-    image: "https://images.unsplash.com/photo-1663121679412-9eeff30ef817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-    },
-    {
-    name: "Stevennius chandra",
-    birthdate: "13-7-2008",
-    image: "https://images.unsplash.com/photo-1663121679412-9eeff30ef817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-    },
-    {
-    name: "Stevennius chandra",
-    birthdate: "13-7-2008",
-    image: "https://images.unsplash.com/photo-1663121679412-9eeff30ef817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-    },
-    {
-    name: "Stevennius chandra",
-    birthdate: "13-7-2008",
-    image: "https://images.unsplash.com/photo-1663121679412-9eeff30ef817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-    },
-    {
-    name: "Stevennius chandra",
-    birthdate: "13-7-2008",
-    image: "https://images.unsplash.com/photo-1663121679412-9eeff30ef817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-    },
-    {
-    name: "Stevennius chandra",
-    birthdate: "13-7-2008",
-    image: "https://images.unsplash.com/photo-1663121679412-9eeff30ef817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-    },
-    {
-    name: "Stevennius chandra",
-    birthdate: "13-7-2008",
-    image: "https://images.unsplash.com/photo-1663121679412-9eeff30ef817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-    },
-    {
-    name: "Stevennius chandra",
-    birthdate: "13-7-2008",
-    image: "https://images.unsplash.com/photo-1663121679412-9eeff30ef817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-    },
-    {
-    name: "Stevennius chandra",
-    birthdate: "13-7-2008",
-    image: "https://images.unsplash.com/photo-1663121679412-9eeff30ef817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-    },
-    {
-    name: "Stevennius chandra",
-    birthdate: "13-7-2008",
-    image: "https://images.unsplash.com/photo-1663121679412-9eeff30ef817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-    },
-    {
-    name: "Stevennius chandra",
-    birthdate: "13-7-2008",
-    image: "https://images.unsplash.com/photo-1663121679412-9eeff30ef817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-    },
-    {
-    name: "Stevennius chandra",
-    birthdate: "13-7-2008",
-    image: "https://images.unsplash.com/photo-1663121679412-9eeff30ef817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-    },
-    {
-    name: "Stevennius chandra",
-    birthdate: "13-7-2008",
-    image: "https://images.unsplash.com/photo-1663121679412-9eeff30ef817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-    },
-    {
-    name: "Stevennius chandra",
-    birthdate: "13-7-2008",
-    image: "https://images.unsplash.com/photo-1663121679412-9eeff30ef817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-    },
-    {
-    name: "Stevennius chandra",
-    birthdate: "13-7-2008",
-    image: "https://images.unsplash.com/photo-1663121679412-9eeff30ef817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-    },
-    {
-    name: "Stevennius chandra",
-    birthdate: "13-7-2008",
-    image: "https://images.unsplash.com/photo-1663121679412-9eeff30ef817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-    },
-    {
-    name: "Stevennius chandra",
-    birthdate: "13-7-2008",
-    image: "https://images.unsplash.com/photo-1663121679412-9eeff30ef817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-    },
-  ]
   
+  {
+   name: "stevennius",
+   birthdate: "26-08-2008",
+   image: "https://images.unsplash.com/photo-1663488631285-ee6eaaa9aef5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+   gender: "male",
+   from: "Medan",
+  },
+  {
+   name: "vanessa",
+   birthdate: "01-05-2008",
+   image: "https://images.unsplash.com/photo-1663487916170-23c86c596284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+   gender: "female",
+   from: "Medan",
+  },
+  {
+   name: "mario",
+   birthdate: "22-01-2003",
+   image: "https://images.unsplash.com/photo-1661786954457-9ffe23d9c30a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+   gender: "male",
+   from: "Medan",
+  },
+  {
+   name: "willian",
+   birthdate: "16-05-2008",
+   image: "https://images.unsplash.com/photo-1557180999-e2d5a8982c27?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+   gender: "male",
+   from: "Medan",
+  }
+  ];
   return (
   
     <View>
@@ -157,11 +67,7 @@ export default function StudentsScreen({navigation}){
           alignItems: "center",
           width: "100%"
         }}>
-          {students.map((student, i) => <StudentCard key={i} data={{
-            name: student.name,
-            birthdate: student.birthdate,
-            image: student.image
-          }}/>)}
+          {students.map((student, i) => <StudentCard key={i} data={student}/>)}
         </View>
       </ScrollView>
     </View>

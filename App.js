@@ -24,7 +24,7 @@ function App() {
         <Stack.Screen name="Teachers" component={TeachersScreen} />
         <Stack.Screen name="Student" component={StudentScreen} />
       </Stack.Navigator>
-      <StatusBar/>
+      <StatusBar style="light"/>
     </NavigationContainer>
   );
 }

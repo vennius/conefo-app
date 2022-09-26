@@ -17,7 +17,7 @@ function Logo(){
     shadowRadius: 4.65,
     elevation: 6,
   }}
-  source={require("../assets/conefo_logo.jpg")}
+  source={require("../assets/icon.png")}
   />
   );
 }

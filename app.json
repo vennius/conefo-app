@@ -9,7 +9,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#9AECEA"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -29,6 +29,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a087b2e5-cee2-4cfd-807f-415c403e8462"
+      }
     }
   }
 }

@@ -1,10 +1,11 @@
 import { TouchableOpacity, Text } from "react-native";
 
-export default function Button({ color, content, navigation, navigateTo }) {
+export default function Button({ bgColor, content, navigation, navigateTo, textColor }) {
   return (
     <TouchableOpacity
       style={{
-        backgroundColor: color,
+        width: 150,
+        backgroundColor: bgColor,
         padding: 10,
         borderRadius: 5,
         shadowColor: "#000",
@@ -26,6 +27,7 @@ export default function Button({ color, content, navigation, navigateTo }) {
         style={{
           fontWeight: "bold",
           textAlign: "center",
+          color: textColor
         }}
       >
         {content}

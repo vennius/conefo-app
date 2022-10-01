@@ -3,11 +3,12 @@ import { useState } from "react";
 import Logo from "../components/Logo";
 import Button from "../components/Button";
 import Post from "../components/Post";
+ import TypeWriter from 'react-native-typewriter';
  
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "grey",
+    backgroundColor: "#9AECEA",
   },
   topSection: {
     justifyContent: "center",
@@ -22,8 +23,8 @@ function HomeScreen({navigation}) {
   const buttonlist = [{
     name: "STUDENTS",
     navigateTo: "Students",
-    bgColor: "#ff7676",
-    textColor: "#f50000"
+    bgColor: "#5adeff",
+    textColor: "#0087ff"
   }
   ];
   
@@ -66,7 +67,9 @@ function HomeScreen({navigation}) {
             textAlign: "center",
           }}
         >
-          {slogan}
+          <TypeWriter maxDelay={250} typing={1}>
+            {slogan}
+          </TypeWriter>
         </Text>
         <View
           style={{

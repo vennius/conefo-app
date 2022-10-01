@@ -4,9 +4,8 @@ function Logo(){
   return (
   <Image 
   style={{
-    width: 100,
-    height: 100,
-    borderRadius: 100,
+    width: 300,
+    height: 300,
     margin: 10,
     shadowColor: "#000",
     shadowOffset: {

@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Text, View, Image, ScrollView, Modal, Alert } from "react-native";
 import StudentCard from "../components/StudentCard";
+import * as Animatable from 'react-native-animatable';
 
 export default function StudentsScreen({navigation}){
   const [modal, setModal] = useState(null);
-  Alert.alert("Info", "Data yang ditampilkan masih data dummy(palsu)");
   
   const students = [
   
@@ -52,7 +52,7 @@ export default function StudentsScreen({navigation}){
         shadowRadius: 4.65,
         elevation: 6,
       }} source={{
-      uri: "https://images.unsplash.com/photo-1662581872342-3f8e0145668f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80"}}/>
+      uri: "https://images.unsplash.com/photo-1668108644868-a7865d4258c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"}}/>
         <Text style={{
           textAlign: "center",
           fontWeight: "bold",
@@ -64,12 +64,12 @@ export default function StudentsScreen({navigation}){
         marginTop: 10,
         marginBottom: 10
       }}>
-        <View style={{
+        <Animatable.View style={{
           alignItems: "center",
           width: "100%"
-        }}>
+        }} animation="slideInRight" duration={700}>
           {students.map((student, i) => <StudentCard key={i} data={student}/>)}
-        </View>
+        </Animatable.View>
       </ScrollView>
     </View>
   

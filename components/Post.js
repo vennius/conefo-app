@@ -1,5 +1,6 @@
 import { View, Text, Modal, Image, TouchableOpacity } from "react-native";
 import { useState } from "react";
+import * as Animatable from 'react-native-animatable';
 
 export default function Post({ data }) {
   const [isModalVisible, setModalVisible] = useState(false);
@@ -40,13 +41,13 @@ export default function Post({ data }) {
           justifyContent: "center",
           alignItems: "center"
         }} onPress={() => setModalVisible(false)} activeOpacity={1}>
-          <Image style={{
+          <Animatable.Image style={{
             width: 350,
             height: 250,
             borderRadius: 10
           }} source={{
             uri: data.image
-          }}/>
+          }} animation="zoomIn" duration={500}/>
         </TouchableOpacity>
       </Modal>
     </View>

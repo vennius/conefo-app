@@ -1,11 +1,12 @@
 import { Image } from "react-native";
+import * as Animate from "react-native-animatable";
 
 function Logo(){
   return (
-  <Image 
+  <Animate.Image 
   style={{
-    width: 300,
-    height: 300,
+    width: 200,
+    height: 200,
     margin: 10,
     shadowColor: "#000",
     shadowOffset: {
@@ -17,6 +18,9 @@ function Logo(){
     elevation: 6,
   }}
   source={require("../assets/icon.png")}
+  animation={"lightSpeedIn"}
+  duration={800}
+  delay={500}
   />
   );
 }

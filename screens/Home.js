@@ -105,7 +105,7 @@ function HomeScreen( {
   ]
 
   return (
-    <ScrollView showsVerticalScrollIndicator={false} decelerationRate={"fast"} style={styles.container}>
+    <ScrollView showsVerticalScrollIndicator={false} decelerationRate={"fast"} overScrollMode={"never"} style={styles.container}>
       <View style={styles.topSection}>
         <Logo />
         <Animatable.Text
@@ -129,7 +129,7 @@ function HomeScreen( {
         }}>TEACHERS</Text>
         <ScrollView style={{
           width: "100%"
-        }} endFillColor={"black"} horizontal={true}>
+        }} endFillColor={"black"} overScrollMode={"never"} horizontal={true}>
           {teachers.map((data, i) => {
           return (
             <View key={i} style={{
@@ -164,10 +164,11 @@ function HomeScreen( {
       >
         <TouchableOpacity
         style={ {
-          width: 150,
-          backgroundColor: "#00ccff",
+          width: 100,
+          height: 100,
+          backgroundColor: "#dedede",
           padding: 10,
-          borderRadius: 5,
+          borderRadius: 100,
           shadowColor: "#000",
           shadowOffset: {
             width: 0,
@@ -176,19 +177,21 @@ function HomeScreen( {
           shadowOpacity: 0.23,
           shadowRadius: 2.62,
           elevation: 4,
-          margin: 10
+          margin: 10,
+          justifyContent: "center",
+          alignItems: "center"
         }}
         activeOpacity={0.7}
         onPress={() => {
           navigation.navigate("Students");
         }}
         >
-        <Text style={ {
-          fontWeight: "bold",
-          textAlign: "center",
-        }}>
-          STUDENTS
-        </Text>
+        <Image source={{
+          uri: "https://cdn-icons-png.flaticon.com/512/2995/2995620.png"
+        }} style={{
+          width: 60,
+          height: 60
+        }}/>
       </TouchableOpacity>
       </View>
       </View>

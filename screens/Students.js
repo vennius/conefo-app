@@ -59,7 +59,7 @@ export default function StudentsScreen({navigation}){
           fontSize: 25,
           textDecorationLine: "underline"
         }}>Students List</Text>
-      <ScrollView style={{
+      <ScrollView overScrollMode={"never"} style={{
         //backgroundColor: "red",
         marginTop: 10,
         marginBottom: 10

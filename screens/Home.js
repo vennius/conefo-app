@@ -56,7 +56,7 @@ function HomeScreen( {
     {
       id: 3,
       image: "https://media.discordapp.net/attachments/720538289656037446/1021781863930531910/IMG-20220815-WA0038.jpg",
-      caption: "haii 👻"
+      caption: "haii"
     },
     {
       id: 4,
@@ -64,48 +64,75 @@ function HomeScreen( {
       caption: "Selfie di kelas 👍"
     },
   ];
-  
-  const teachers = [
-    {
+
+  const teachers = [{
     name: "Kenny Calnelius Winata",
     image: "https://images.unsplash.com/photo-1667684550432-35d19dd88940?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDh8cVBZc0R6dkpPWWN8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=60"
   },
     {
-    name: "Kenny Calnelius Winata",
-    image: "https://images.unsplash.com/photo-1667684550432-35d19dd88940?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDh8cVBZc0R6dkpPWWN8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=60"
-  },
+      name: "Kenny Calnelius Winata",
+      image: "https://images.unsplash.com/photo-1667684550432-35d19dd88940?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDh8cVBZc0R6dkpPWWN8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=60"
+    },
     {
-    name: "Kenny Calnelius Winata",
-    image: "https://images.unsplash.com/photo-1667684550432-35d19dd88940?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDh8cVBZc0R6dkpPWWN8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=60"
-  },
+      name: "Kenny Calnelius Winata",
+      image: "https://images.unsplash.com/photo-1667684550432-35d19dd88940?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDh8cVBZc0R6dkpPWWN8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=60"
+    },
     {
-    name: "Kenny Calnelius Winata",
-    image: "https://images.unsplash.com/photo-1667684550432-35d19dd88940?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDh8cVBZc0R6dkpPWWN8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=60"
-  },
+      name: "Kenny Calnelius Winata",
+      image: "https://images.unsplash.com/photo-1667684550432-35d19dd88940?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDh8cVBZc0R6dkpPWWN8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=60"
+    },
     {
-    name: "Kenny Calnelius Winata",
-    image: "https://images.unsplash.com/photo-1667684550432-35d19dd88940?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDh8cVBZc0R6dkpPWWN8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=60"
-  },
+      name: "Kenny Calnelius Winata",
+      image: "https://images.unsplash.com/photo-1667684550432-35d19dd88940?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDh8cVBZc0R6dkpPWWN8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=60"
+    },
     {
-    name: "Kenny Calnelius Winata",
-    image: "https://images.unsplash.com/photo-1667684550432-35d19dd88940?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDh8cVBZc0R6dkpPWWN8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=60"
-  },
+      name: "Kenny Calnelius Winata",
+      image: "https://images.unsplash.com/photo-1667684550432-35d19dd88940?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDh8cVBZc0R6dkpPWWN8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=60"
+    },
     {
-    name: "Kenny Calnelius Winata",
-    image: "https://images.unsplash.com/photo-1667684550432-35d19dd88940?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDh8cVBZc0R6dkpPWWN8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=60"
-  },
+      name: "Kenny Calnelius Winata",
+      image: "https://images.unsplash.com/photo-1667684550432-35d19dd88940?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDh8cVBZc0R6dkpPWWN8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=60"
+    },
     {
-    name: "Kenny Calnelius Winata",
-    image: "https://images.unsplash.com/photo-1667684550432-35d19dd88940?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDh8cVBZc0R6dkpPWWN8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=60"
-  },
+      name: "Kenny Calnelius Winata",
+      image: "https://images.unsplash.com/photo-1667684550432-35d19dd88940?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDh8cVBZc0R6dkpPWWN8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=60"
+    },
     {
-    name: "Kenny Calnelius Winata",
-    image: "https://images.unsplash.com/photo-1667684550432-35d19dd88940?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDh8cVBZc0R6dkpPWWN8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=60"
-  }
-  ]
+      name: "Kenny Calnelius Winata",
+      image: "https://images.unsplash.com/photo-1667684550432-35d19dd88940?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDh8cVBZc0R6dkpPWWN8fGVufDB8fHx8&auto=format&fit=crop&w=1100&q=60"
+    }]
 
   return (
     <ScrollView showsVerticalScrollIndicator={false} decelerationRate={"fast"} overScrollMode={"never"} style={styles.container}>
+      <TouchableOpacity
+      style={ {
+        width: 60,
+        height: 60,
+        backgroundColor: "#dedede",
+        padding: 10,
+        borderRadius: 100,
+        shadowColor: "#000",
+        shadowOffset: {
+          width: 0,
+          height: 2,
+        },
+        shadowOpacity: 0.23,
+        shadowRadius: 2.62,
+        elevation: 4,
+        margin: 10
+      }}
+      activeOpacity={0.7}
+      onPress={() => {
+        navigation.navigate("Students");
+      }}
+      >
+        <Image source={ {
+        uri: "https://cdn-icons-png.flaticon.com/512/2995/2995620.png"
+      }} style={ {
+        width: "100%",
+        height: "100%"
+      }} />
+      </TouchableOpacity>
       <View style={styles.topSection}>
         <Logo />
         <Animatable.Text
@@ -121,37 +148,37 @@ function HomeScreen( {
       >
           {slogan}
         </Animatable.Text>
-        <Text style={{
-          textAlign: "center",
-          fontSize: 30,
-          textDecorationLine: "underline",
-          marginTop: 20
-        }}>TEACHERS</Text>
-        <ScrollView style={{
-          width: "100%"
-        }} endFillColor={"black"} overScrollMode={"never"} horizontal={true}>
+        <Text style={ {
+        textAlign: "center",
+        fontSize: 30,
+        textDecorationLine: "underline",
+        marginTop: 20
+      }}>TEACHERS</Text>
+        <ScrollView style={ {
+        width: "100%"
+      }} endFillColor={"black"} overScrollMode={"never"} horizontal={true}>
           {teachers.map((data, i) => {
           return (
-            <View key={i} style={{
+            <View key={i} style={ {
               width: 110,
               height: 135,
               //backgroundColor: "white",
               margin: 10
             }}>
-              <Image source={{
+              <Image source={ {
                 uri: data.image
-              }} style={{
+              }} style={ {
                 width: "100%",
                 height: "80%",
                 borderRadius: 50
-              }}/>
-              <Text style={{
+              }} />
+              <Text style={ {
                 textAlign: "center",
                 fontWeight: "bold"
               }}>{data.name}</Text>
             </View>
           );
-          })}
+        })}
         </ScrollView>
         <View
       style={ {
@@ -162,37 +189,6 @@ function HomeScreen( {
         width: "100%",
       }}
       >
-        <TouchableOpacity
-        style={ {
-          width: 100,
-          height: 100,
-          backgroundColor: "#dedede",
-          padding: 10,
-          borderRadius: 100,
-          shadowColor: "#000",
-          shadowOffset: {
-            width: 0,
-            height: 2,
-          },
-          shadowOpacity: 0.23,
-          shadowRadius: 2.62,
-          elevation: 4,
-          margin: 10,
-          justifyContent: "center",
-          alignItems: "center"
-        }}
-        activeOpacity={0.7}
-        onPress={() => {
-          navigation.navigate("Students");
-        }}
-        >
-        <Image source={{
-          uri: "https://cdn-icons-png.flaticon.com/512/2995/2995620.png"
-        }} style={{
-          width: 60,
-          height: 60
-        }}/>
-      </TouchableOpacity>
       </View>
       </View>
       <Text style={ {
@@ -200,17 +196,19 @@ function HomeScreen( {
       fontWeight: "bold",
       textDecorationLine: "underline",
       fontSize: 30
-    }}>Our Memories</Text>
-        <View style={ {
-      alignItems: "center",
-      paddingBottom: 15
-    }}>
+    }}>Memories</Text>
+        <ScrollView
+      style={ {
+        paddingBottom: 15
+      }}
+      horizontal={true}
+      overScrollMode={"never"}>
         {memories.map((data, i) => {
         return (
           <Post data={data} key={data.id} />
         );
       })}
-        </View>
+        </ScrollView>
     </ScrollView>
   );
 }

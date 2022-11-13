@@ -8,18 +8,19 @@ export default function Post({ data }) {
   return (
     <View
       style={{
-        width: "90%",
+        width: 300,
         backgroundColor: "white",
         borderRadius: 20,
         overflow: "hidden",
         marginTop: 15,
+        marginHorizontal: 10
       }}
     >
       <TouchableOpacity onPress={() => setModalVisible(true)} activeOpacity={0.9}>
         <Image
           style={{
             width: "100%",
-            height: 250,
+            height: 200,
           }}
           source={{
             uri: data.image,
@@ -47,7 +48,7 @@ export default function Post({ data }) {
             borderRadius: 10
           }} source={{
             uri: data.image
-          }} animation="zoomIn" duration={500}/>
+          }} animation="zoomIn" duration={250}/>
         </TouchableOpacity>
       </Modal>
     </View>
